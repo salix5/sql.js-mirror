@@ -67,7 +67,7 @@ function copyFunction(id) {
         var copyToClipboard = '<div class="code-copy-icon-container" onclick="copyFunction(\'' + id + '\')"><div><svg class="sm-icon" alt="click to copy"><use xlink:href="#copy-icon"></use></svg>' + tooltip + '<div></div>';
 
         // extract the code language
-        var langName = classList[classList.length - 1].split('-')[1];
+        var langName = classList.length ? classList[classList.length - 1].split('-')[1] : undefined;
 
         if ( langName === undefined ) { langName = 'JavaScript'; }
 
